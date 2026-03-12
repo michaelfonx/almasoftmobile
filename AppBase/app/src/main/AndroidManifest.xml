@@ -1,35 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-		  xmlns:tools="http://schemas.android.com/tools">
-	<uses-permission android:name="android.permission.INTERNET" />
-	<application
+          xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
             android:usesCleartextTraffic="true"
-			android:allowBackup="true"
-			android:dataExtractionRules="@xml/data_extraction_rules"
-			android:fullBackupContent="@xml/backup_rules"
-			android:label="@string/app_name"
-			android:supportsRtl="true"
-			android:theme="@style/Theme.AppInterface"
-			tools:targetApi="31">
-		<!-- primera Actividad -->
-		<activity
-				android:name=".MainActivity"
-				android:exported="true">
-			<intent-filter>
-				<action android:name="android.intent.action.MAIN"/>
+            android:allowBackup="true"
+            android:dataExtractionRules="@xml/data_extraction_rules"
+            android:fullBackupContent="@xml/backup_rules"
+            android:label="@string/app_name"
+            android:supportsRtl="true"
+            android:theme="@style/Theme.AppInterface"
+            tools:targetApi="31">
 
-				<category android:name="android.intent.category.LAUNCHER"/>
-			</intent-filter>
-		</activity>
+        <!-- LOGIN (pantalla inicial) -->
+        <activity
+                android:name=".activitys.LoginActivity"
+                android:exported="true">
 
-		<!-- Segunda actividad -->
-		<activity android:name=".ProductosActivity"
-				  android:exported="true">
-		</activity>
-        <activity android:name=".BuscarContratoActivity"/>
-        <activity android:name=".CrearContratoActivity"/>
-        <activity android:name=".ActualizarContratoActivity"/>
-        <activity android:name=".EliminarContratoActivity"/>
-	</application>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+
+        </activity>
+
+        <!-- Registro -->
+        <activity android:name=".activitys.RegistroActivity"/>
+
+        <!-- MainActivity -->
+        <activity android:name=".activitys.MainActivity"/>
+
+        <!-- Pantalla contratos -->
+        <activity android:name=".activitys.ProductosActivity"/>
+
+        <!-- CRUD contratos -->
+        <activity android:name=".activitys.BuscarContratoActivity"/>
+        <activity android:name=".activitys.CrearContratoActivity"/>
+        <activity android:name=".activitys.ActualizarContratoActivity"/>
+        <activity android:name=".activitys.EliminarContratoActivity"/>
+
+    </application>
 
 </manifest>

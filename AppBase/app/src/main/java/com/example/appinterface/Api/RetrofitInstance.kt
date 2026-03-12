@@ -6,6 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 object RetrofitInstance {
 
     private const val BASE_URL = "http://10.0.2.2:8080/"
+
     val api: ApiService by lazy {
         Retrofit.Builder()
             .baseUrl(BASE_URL)
@@ -14,11 +15,11 @@ object RetrofitInstance {
             .create(ApiService::class.java)
     }
 
-    val api2kotlin: ApiServicesKotlin by lazy {
+    val usuarioApi: UsuarioApiService by lazy {
         Retrofit.Builder()
             .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
-            .create(ApiServicesKotlin::class.java)
+            .create(UsuarioApiService::class.java)
     }
 }

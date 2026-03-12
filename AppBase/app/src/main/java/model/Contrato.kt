@@ -1,5 +1,4 @@
-package com.example.appinterface
-
+package com.example.appinterface.model
 data class Contrato(
     val contrato_id: Int?,
     val contrato_estado: Boolean,
