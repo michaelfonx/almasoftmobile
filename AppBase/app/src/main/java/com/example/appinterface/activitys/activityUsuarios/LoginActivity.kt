@@ -1,11 +1,16 @@
-package com.example.appinterface.activitys
+package com.example.appinterface.activitys.activityUsuarios
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.*
+import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.appinterface.Api.RetrofitInstance
 import com.example.appinterface.R
+import com.example.appinterface.activitys.activityUsuarios.RegistroActivity
+import com.example.appinterface.activitys.activityContrato.ProductosActivity
 import com.example.appinterface.model.LoginRequest
 import com.example.appinterface.model.LoginResponse
 import retrofit2.Call
@@ -41,10 +46,10 @@ class LoginActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            val login = LoginRequest(correo,password)
+            val login = LoginRequest(correo, password)
 
             RetrofitInstance.usuarioApi.login(login)
-                .enqueue(object : Callback<LoginResponse>{
+                .enqueue(object : Callback<LoginResponse> {
 
                     override fun onResponse(
                         call: Call<LoginResponse>,

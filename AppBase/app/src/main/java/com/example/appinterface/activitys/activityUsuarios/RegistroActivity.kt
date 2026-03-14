@@ -1,7 +1,9 @@
-package com.example.appinterface.activitys
+package com.example.appinterface.activitys.activityUsuarios
 
 import android.os.Bundle
-import android.widget.*
+import android.widget.Button
+import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.appinterface.Api.RetrofitInstance
 import com.example.appinterface.R

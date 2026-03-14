@@ -1,4 +1,4 @@
-package com.example.appinterface.activitys
+package com.example.appinterface.activitys.activityContrato
 
 import android.os.Bundle
 import android.widget.Button
@@ -6,39 +6,41 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.appinterface.Api.RetrofitInstance
-import com.example.appinterface.model.Contrato
 import com.example.appinterface.R
+import com.example.appinterface.model.Contrato
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class CrearContratoActivity : AppCompatActivity() {
+class ActualizarContratoActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_crear_contrato)
+        setContentView(R.layout.activity_actualizar_contrato)
 
-        val valor = findViewById<EditText>(R.id.txtValor)
-        val cliente = findViewById<EditText>(R.id.txtCliente)
+        val txtId = findViewById<EditText>(R.id.txtId)
+        val txtValor = findViewById<EditText>(R.id.txtValor)
 
-        findViewById<Button>(R.id.btnCrear).setOnClickListener {
+        findViewById<Button>(R.id.btnActualizar).setOnClickListener {
+
+            val id = txtId.text.toString().toInt()
 
             val contrato = Contrato(
-                null,
+                id,
                 true,
-                valor.text.toString().toDouble(),
-                cliente.text.toString().toInt()
+                txtValor.text.toString().toDouble(),
+                1
             )
 
-            RetrofitInstance.api.crearContrato(contrato)
+            RetrofitInstance.api.actualizarContrato(id, contrato)
                 .enqueue(object : Callback<String> {
 
                     override fun onResponse(call: Call<String>, response: Response<String>) {
 
                         Toast.makeText(
-                            this@CrearContratoActivity,
-                            "Contrato creado",
+                            this@ActualizarContratoActivity,
+                            "Contrato actualizado",
                             Toast.LENGTH_LONG
                         ).show()
                     }

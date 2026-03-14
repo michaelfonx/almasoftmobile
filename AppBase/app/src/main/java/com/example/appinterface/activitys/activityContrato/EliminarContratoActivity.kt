@@ -1,4 +1,4 @@
-package com.example.appinterface.activitys
+package com.example.appinterface.activitys.activityContrato
 
 import android.os.Bundle
 import android.widget.Button

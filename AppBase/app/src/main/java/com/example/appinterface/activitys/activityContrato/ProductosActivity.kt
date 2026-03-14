@@ -1,4 +1,4 @@
-package com.example.appinterface.activitys
+package com.example.appinterface.activitys.activityContrato
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,8 +9,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.appinterface.Adapter.ContratoAdapter
 import com.example.appinterface.Api.RetrofitInstance
-import com.example.appinterface.model.Contrato
 import com.example.appinterface.R
+import com.example.appinterface.model.Contrato
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

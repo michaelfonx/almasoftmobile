@@ -4,7 +4,7 @@ import com.example.appinterface.model.Contrato
 import retrofit2.Call
 import retrofit2.http.*
 
-interface ApiService {
+interface ContratoApiService {
 
 
 

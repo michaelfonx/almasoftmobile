@@ -1,4 +1,4 @@
-package com.example.appinterface.activitys
+package com.example.appinterface.activitys.activityContrato
 
 import android.os.Bundle
 import android.widget.Button
@@ -6,8 +6,8 @@ import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.appinterface.Api.RetrofitInstance
-import com.example.appinterface.model.Contrato
 import com.example.appinterface.R
+import com.example.appinterface.model.Contrato
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

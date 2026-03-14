@@ -16,7 +16,7 @@
 
         <!-- LOGIN (pantalla inicial) -->
         <activity
-                android:name=".activitys.LoginActivity"
+                android:name=".activitys.activityUsuarios.LoginActivity"
                 android:exported="true">
 
             <intent-filter>
@@ -27,19 +27,19 @@
         </activity>
 
         <!-- Registro -->
-        <activity android:name=".activitys.RegistroActivity"/>
+        <activity android:name=".activitys.activityUsuarios.RegistroActivity"/>
 
         <!-- MainActivity -->
         <activity android:name=".activitys.MainActivity"/>
 
         <!-- Pantalla contratos -->
-        <activity android:name=".activitys.ProductosActivity"/>
+        <activity android:name=".activitys.activityContrato.ProductosActivity"/>
 
         <!-- CRUD contratos -->
-        <activity android:name=".activitys.BuscarContratoActivity"/>
-        <activity android:name=".activitys.CrearContratoActivity"/>
-        <activity android:name=".activitys.ActualizarContratoActivity"/>
-        <activity android:name=".activitys.EliminarContratoActivity"/>
+        <activity android:name=".activitys.activityContrato.BuscarContratoActivity"/>
+        <activity android:name=".activitys.activityContrato.CrearContratoActivity"/>
+        <activity android:name=".activitys.activityContrato.ActualizarContratoActivity"/>
+        <activity android:name=".activitys.activityContrato.EliminarContratoActivity"/>
 
     </application>
 
